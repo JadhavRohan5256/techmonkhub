@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200;1,300;1,400&family=Rubik:ital,wght@0,300;0,400;1,300&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/home-page-style.css">
+</head>
+
+<body>
+	<main>
+		<!-- SPINNER -->
+		<div class="spinner-global">
+			<div class="loader"></div>
+		</div>
+
+		<!-- TOAST MESSAGE -->
+		<div class="toast-wrapper"></div>
+		<div class="theme-mode">
+			<input type="checkbox" name="darkMode" id="darkMode" />
+			<label for="darkMode" class="mode">
+				<i class="fa-solid fa-moon"></i>
+			</label>
+		</div>
+
+		<div class="show-contact-main container">
+			<div class="table-wrapper">
+				<div class="filter">
+					<form action="#" method="post">
+						<div class="search-box">
+							<i class="fa-solid fa-magnifying-glass search-icon"></i>
+							<input type="text" name="search" id="search" placeholder="Search employee here.." />
+						</div>
+					</form>
+					<button class="employee-btn add-btn">Add</button>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>Profile</th>
+							<th>Id</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Mobile No</th>
+							<th>Class</th>
+							<th>Total Fees</th>
+							<th>Deposite Fees</th>
+							<th>Pending Fees</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody class="all-employee">
+						<!-- data is comming from javascript parseData method -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- ADD EMPLOYEE FORM CONTAINER  -->
+		<div class="employee-form-main">
+			<div class="employee-wrapper">
+				<form id="studentForm">
+					<div class="form-box">
+						<h2 class="employee-title">
+							Student Details
+						</h2>
+					</div>
+
+					<div class="form-box">
+						<img src="fileUploaded/1697725584download.png" class="selected_profile">
+					</div>
+					<div class="two-column">
+						<div class="form-box">
+							<label for="stud_profile">
+								<span>Choose Profile</span>
+							</label>
+							<div class="file_wrapper">
+								<span class="file_name"></span>
+								<span>Browse File</span>
+							</div>
+							<input type="hidden" name="stud_id" id="stud_id" />
+							<input type="file" name="stud_profile" id="stud_profile" />
+						</div>
+						<div class="form-box">
+							<label for="stud_name">Student Name</label>
+							<input type="text" name="stud_name" id="stud_name" placeholder="Enter name here.."
+								value="" />
+						</div>
+					</div>
+					<div class="two-column">
+						<div class="form-box">
+							<label for="stud_email">Student Email</label>
+							<input type="email" name="stud_email" id="stud_email" placeholder="enter email here.." />
+						</div>
+						<div class="form-box">
+							<label for="stud_mobile">Mobile No</label>
+							<input type="text" name="stud_mobile" id="stud_mobile"
+								placeholder="enter mobile no here.." />
+						</div>
+					</div>
+					<div class="two-column">
+						<div class="form-box">
+							<label for="stud_class">Class</label>
+							<input type="text" name="stud_class" id="stud_class" placeholder="enter class here.." />
+						</div>
+						<div class="form-box">
+							<label for="stud_total_fees">Total Fees</label>
+							<input type="number" name="stud_total_fees" id="stud_total_fees"
+								placeholder="enter total fees here.." />
+						</div>
+					</div>
+					<div class="two-column">
+						<div class="form-box">
+							<label for="stud_deposite_fees">Deposite Fees</label>
+							<input type="number" name="stud_deposite_fees" id="stud_deposite_fees"
+								placeholder="enter deposite fees here.." />
+						</div>
+						<div class="form-box">
+							<label for="stud_pending_fees">Pending Fees</label>
+							<input type="number" name="stud_pending_fees" id="stud_pending_fees"
+								placeholder="enter pending fees here.." />
+						</div>
+					</div>
+					<div class="two-column">
+						<div class="form-box">
+							<button type="submit" class="employee-btn" id="submit-btn" data="save">Save</button>
+						</div>
+						<div class="form-box">
+							<button type="reset" class="employee-btn cancel-btn">Cancel</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<script src="js/jquery.js"></script>
+	<script src="js/home-page-script.js"></script>
+</body>
+
+</html>
